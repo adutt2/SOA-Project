@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.1-b419 (branches/2.3.1.x-7937; 2014-08-04T08:11:03+0000) JAXWS-RI/2.2.10-b140803.1500 JAXWS-API/2.2.11 JAXB-RI/2.2.10-b140802.1033 JAXB-API/2.2.12-b140109.1041 svn-revision#unknown. --><xs:schema xmlns:tns="http://WebService/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://WebService/">
+
+<xs:element name="deleteTransactions" type="tns:deleteTransactions"/>
+
+<xs:element name="deleteTransactionsResponse" type="tns:deleteTransactionsResponse"/>
+
+<xs:element name="getTransactions" type="tns:getTransactions"/>
+
+<xs:element name="getTransactionsResponse" type="tns:getTransactionsResponse"/>
+
+<xs:complexType name="deleteTransactions">
+<xs:sequence>
+<xs:element name="Tno" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteTransactionsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:transactionModels" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="transactionModels">
+<xs:sequence>
+<xs:element name="discount" type="xs:string" minOccurs="0"/>
+<xs:element name="driver_ID" type="xs:string" minOccurs="0"/>
+<xs:element name="driver_Price" type="xs:string" minOccurs="0"/>
+<xs:element name="make" type="xs:string" minOccurs="0"/>
+<xs:element name="model" type="xs:string" minOccurs="0"/>
+<xs:element name="order_ID" type="xs:string" minOccurs="0"/>
+<xs:element name="price_ID" type="xs:string" minOccurs="0"/>
+<xs:element name="quality" type="xs:string" minOccurs="0"/>
+<xs:element name="rate" type="xs:string" minOccurs="0"/>
+<xs:element name="run_Number" type="xs:string" minOccurs="0"/>
+<xs:element name="special" type="xs:string" minOccurs="0"/>
+<xs:element name="surcharge" type="xs:string" minOccurs="0"/>
+<xs:element name="transaction_ID" type="xs:string" minOccurs="0"/>
+<xs:element name="transaction_amount" type="xs:string" minOccurs="0"/>
+<xs:element name="transaction_date" type="xs:string" minOccurs="0"/>
+<xs:element name="transaction_description" type="xs:string" minOccurs="0"/>
+<xs:element name="truck_No" type="xs:string" minOccurs="0"/>
+<xs:element name="unit_Price" type="xs:string" minOccurs="0"/>
+<xs:element name="vin" type="xs:string" minOccurs="0"/>
+<xs:element name="year" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTransactions">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getTransactionsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:transactionModels" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

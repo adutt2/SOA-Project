@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.1-b419 (branches/2.3.1.x-7937; 2014-08-04T08:11:03+0000) JAXWS-RI/2.2.10-b140803.1500 JAXWS-API/2.2.11 JAXB-RI/2.2.10-b140802.1033 JAXB-API/2.2.12-b140109.1041 svn-revision#unknown. --><xs:schema xmlns:tns="http://WebServices/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://WebServices/">
+
+<xs:element name="getTrucks" type="tns:getTrucks"/>
+
+<xs:element name="getTrucksResponse" type="tns:getTrucksResponse"/>
+
+<xs:element name="getTrucks_1" type="tns:getTrucks_1"/>
+
+<xs:element name="getTrucks_1Response" type="tns:getTrucks_1Response"/>
+
+<xs:complexType name="getTrucks">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getTrucksResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:truckModel" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="truckModel">
+<xs:sequence>
+<xs:element name="capacity" type="xs:string" minOccurs="0"/>
+<xs:element name="color" type="xs:string" minOccurs="0"/>
+<xs:element name="driver_ID" type="xs:string" minOccurs="0"/>
+<xs:element name="licensePlateNo" type="xs:string" minOccurs="0"/>
+<xs:element name="make" type="xs:string" minOccurs="0"/>
+<xs:element name="truckNo" type="xs:string" minOccurs="0"/>
+<xs:element name="type" type="xs:string" minOccurs="0"/>
+<xs:element name="vin" type="xs:string" minOccurs="0"/>
+<xs:element name="year" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTrucks_1">
+<xs:sequence>
+<xs:element name="Tno" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTrucks_1Response">
+<xs:sequence>
+<xs:element name="return" type="tns:truckModel" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
