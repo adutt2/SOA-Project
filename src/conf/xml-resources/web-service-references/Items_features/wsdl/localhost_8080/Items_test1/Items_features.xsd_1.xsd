@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.1-b419 (branches/2.3.1.x-7937; 2014-08-04T08:11:03+0000) JAXWS-RI/2.2.10-b140803.1500 JAXWS-API/2.2.11 JAXB-RI/2.2.10-b140802.1033 JAXB-API/2.2.12-b140109.1041 svn-revision#unknown. --><xs:schema xmlns:tns="http://WebService/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://WebService/">
+
+<xs:element name="getItems" type="tns:getItems"/>
+
+<xs:element name="getItemsResponse" type="tns:getItemsResponse"/>
+
+<xs:element name="getItems_1" type="tns:getItems_1"/>
+
+<xs:element name="getItems_1Response" type="tns:getItems_1Response"/>
+
+<xs:complexType name="getItems">
+<xs:sequence>
+<xs:element name="Ino" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getItemsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:itemModels" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="itemModels">
+<xs:sequence>
+<xs:element name="driver_ID" type="xs:string" minOccurs="0"/>
+<xs:element name="item_No" type="xs:string" minOccurs="0"/>
+<xs:element name="total_Cost" type="xs:string" minOccurs="0"/>
+<xs:element name="truck_ID" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getItems_1">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getItems_1Response">
+<xs:sequence>
+<xs:element name="return" type="tns:itemModels" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

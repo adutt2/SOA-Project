@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.1-b419 (branches/2.3.1.x-7937; 2014-08-04T08:11:03+0000) JAXWS-RI/2.2.10-b140803.1500 JAXWS-API/2.2.11 JAXB-RI/2.2.10-b140802.1033 JAXB-API/2.2.12-b140109.1041 svn-revision#unknown. --><xs:schema xmlns:tns="http://WebServices/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://WebServices/">
+
+<xs:element name="getCustomerDetails" type="tns:getCustomerDetails"/>
+
+<xs:element name="getCustomerDetailsResponse" type="tns:getCustomerDetailsResponse"/>
+
+<xs:element name="getCustomers" type="tns:getCustomers"/>
+
+<xs:element name="getCustomersResponse" type="tns:getCustomersResponse"/>
+
+<xs:complexType name="getCustomers">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getCustomersResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:custmerModels" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="custmerModels">
+<xs:sequence>
+<xs:element name="alternate_Contact_name" type="xs:string" minOccurs="0"/>
+<xs:element name="billing_Address" type="xs:string" minOccurs="0"/>
+<xs:element name="city" type="xs:string" minOccurs="0"/>
+<xs:element name="company_name" type="xs:string" minOccurs="0"/>
+<xs:element name="contact_name" type="xs:string" minOccurs="0"/>
+<xs:element name="country" type="xs:string" minOccurs="0"/>
+<xs:element name="customer_ID" type="xs:string" minOccurs="0"/>
+<xs:element name="customer_type" type="xs:string" minOccurs="0"/>
+<xs:element name="date" type="xs:string" minOccurs="0"/>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="first_name" type="xs:string" minOccurs="0"/>
+<xs:element name="phone" type="xs:string" minOccurs="0"/>
+<xs:element name="state" type="xs:string" minOccurs="0"/>
+<xs:element name="zip_code" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCustomerDetails">
+<xs:sequence>
+<xs:element name="Cid" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCustomerDetailsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:custmerModels" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
